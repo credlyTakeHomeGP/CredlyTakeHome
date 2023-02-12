@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="content_padding">20dp</dimen>
+    <dimen name="error_dialog_padding">20dp</dimen>
+    <dimen name="error_dialog_size">300dp</dimen>
+    <dimen name="loader_size">50dp</dimen>
+    <dimen name="row_border_height">2dp</dimen>
+    <dimen name="retry_button_height">30dp</dimen>
+    <dimen name="retry_button_width">100dp</dimen>
+</resources>

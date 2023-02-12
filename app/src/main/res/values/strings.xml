@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ContactsApp</string>
+    <string name="name">Name: %1$s</string>
+    <string name="email">Email: %1$s</string>
+    <string name="phone_number">Phone Number: %1$s</string>
+    <string name="retry">Retry</string>
+</resources>

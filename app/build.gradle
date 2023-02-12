@@ -1,0 +1,73 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+}
+
+android {
+    namespace 'com.example.contactsapp'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.contactsapp"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_9
+        targetCompatibility JavaVersion.VERSION_1_9
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes true
+}
+
+dependencies {
+    apply from: '../dependencies.gradle'
+
+    // Android
+    implementation "androidx.appcompat:appcompat:$appCompatVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+    implementation "androidx.core:core-ktx:$androidxCoreKtxVersion"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swipeRefreshLayoutVersion"
+    implementation "com.google.android.material:material:$androidMaterialVersion"
+
+    // Dependency Injection
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    kapt "com.google.dagger:hilt-compiler:$hiltVersion"
+
+    // Networking Client
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitGsonConverterVersion"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+
+    // Serialization
+    implementation "com.google.code.gson:gson:$gsonVersion"
+
+    // Arrow
+    implementation "io.arrow-kt:arrow-core:$arrowCoreVersion"
+
+    // Testing
+    testImplementation "app.cash.turbine:turbine:$turbineVersion"
+    testImplementation "io.mockk:mockk:$mockkVersion"
+    testImplementation "junit:junit:$junitVersion"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesTestVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$androidEspressoVersion"
+    androidTestImplementation "androidx.test.ext:junit:$androidJunitVersion"
+}

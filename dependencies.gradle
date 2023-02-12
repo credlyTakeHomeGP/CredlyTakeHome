@@ -1,0 +1,29 @@
+ext {
+    // Android
+    androidMaterialVersion = '1.7.0'
+    androidxCoreKtxVersion = '1.7.0'
+    appCompatVersion = '1.6.0'
+    constraintLayoutVersion = '2.1.4'
+    swipeRefreshLayoutVersion = '1.1.0'
+
+    // Dependency Injection
+    hiltVersion = '2.44'
+
+    // Networking Client
+    retrofitGsonConverterVersion = '2.5.0'
+    retrofitVersion = '2.9.0'
+
+    // Serialization
+    gsonVersion = '2.10.1'
+
+    // Arrow
+    arrowCoreVersion = '1.1.2'
+
+    // Testing
+    coroutinesTestVersion = '1.6.4'
+    junitVersion = '4.13.2'
+    mockkVersion = '1.13.4'
+    turbineVersion = '0.12.1'
+    androidEspressoVersion = '3.4.0'
+    androidJunitVersion = '1.1.5'
+}
